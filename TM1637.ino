@@ -2,8 +2,8 @@
 #include <TM1637Display.h>
 
 // Module connection pins (Digital Pins)
-#define CLK 2
-#define DIO 3
+#define CLK 10
+#define DIO 11
 
 // The amount of time (in milliseconds) between tests
 #define TEST_DELAY   2000
@@ -17,12 +17,9 @@ const uint8_t SEG_DONE[] = {
 
 TM1637Display display(CLK, DIO);
 
-void setup()
-{
-}
+void setup(){}
 
-void loop()
-{
+void loop(){
   int k;
   uint8_t data[] = { 0xff, 0xff, 0xff, 0xff };
   display.setBrightness(0x0f);
